@@ -11,6 +11,11 @@ services:
         published: 5173
         protocol: tcp
         mode: host
+      - target: 4173
+        host_ip: 127.0.0.1
+        published: 4173
+        protocol: tcp
+        mode: host
     volumes:
       - type: bind
         source: .
