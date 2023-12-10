@@ -11,10 +11,16 @@ export default defineConfig({
     host: true
   },
   build: {
+    outDir: resolve(__dirname, 'dist'),
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/lp/main/index.html'),
         sub: resolve(__dirname, 'src/lp/sub/index.html')
+      },
+      output: {
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name].[ext]'
       }
     }
   }
